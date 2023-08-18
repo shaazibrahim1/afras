@@ -38,11 +38,63 @@
                     <img src="images/user.png">
                 </div>
                 <div class="about-col-2">
-                    <h1>About Me</h1>
+                    <h1 class="sub-title">About Me</h1>
+                    <p>نبذة عنا
+                        Acme Intralog Fzco is one of the leading material handling & warehouse automation solution providers in the Middle East, developing tailor-made approaches for complex needs.
+                        
+                        Founded in 1975 with headquarter in Dubai, we optimise intralogistics for customers across multiple industries, including retail, e-commerce, FMCG, food & beverage, pharma.
+                        
+                        Our offering ranges from solutions for factory automation, sortation systems, pallet & tote storage and retrieval as well as industrial automation components. 
+                        Besides having a full fledged manufacturing facility located in Jebel Ali Free Zone, we have a dedicated service team that provides 24/7 life cycle service and maintenance support throughout the GCC.
+                        
+                        As part of the industrial automation components vertical, we have established strong partnerships with leading global suppliers for years, bringing their technology to our region.
+                         </p>
+
+                         <div class="tab-titles">
+                             <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                             <p class="tab-links" onclick="opentab('experience')" >Experience</p>
+                             <p class="tab-links" onclick="opentab('education')">Education</p>
+                         </div>
+                         <div class="tab-contents active-tab" id="skills">
+                             <ul>
+                                 <li><span>UI/UX</span><br>Designer Web app interfaces</li>
+                                 <li><span>web development</span><br> Web app development</li>
+                                 <li><span>app development</span><br>building Android/ios apps</li>
+                             </ul>
+                         </div>
+                         <div class="tab-contents" id="experience">
+                            <ul>
+                                <li><span>2021 - current</span><br>Designer houses</li>
+                                <li><span>web development</span><br>one year</li>
+                                <li><span>acme company</span><br>lumion</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="education">
+                            <ul>
+                                <li><span>UI/UX</span><br>engineer</li>
+                                <li><span>coimbatore</span><br> tamilnadu</li>
+                                <li><span>mechatronics</span><br>mechatronics</li>
+                            </ul>
+                        </div>
                 </div>
             </div>
         </div>
     </div>
-    
+    <script>
+
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+
+    </script>
 </body>
 </html>
